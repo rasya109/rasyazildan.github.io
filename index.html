@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M Rasya Zildan A</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+    /* Reset default margin and padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Navbar styles */
+    .navbar {
+      background-color: #090030;
+      color: #fff;
+      padding: 15px 0;
+      top: 0;
+      width: 100%;
+      position: sticky;
+    }
+
+    .container {
+      width: 90%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar button {
+      background-color: #090030;
+      border: none;
+    }
+
+    .navbar-header {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-toggler {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 20px;
+      cursor: pointer;
+    }
+
+    .toggler-icon {
+      width: 100%;
+      height: 3px;
+      background-color: #fff;
+    }
+
+    .menu-list {
+      list-style: none;
+      display: flex;
+    }
+
+    .menu-list li {
+      margin-right: 20px;
+    }
+
+    .menu-list li:last-child {
+      margin-right: 0;
+    }
+
+    .menu-list li a {
+      text-decoration: none;
+      color: #fff;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .menu-list li a:hover {
+      text-decoration: none;
+      color: #f30a49;
+      cursor: pointer;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .menu-list h4 {
+      color: white;
+      font-family: "Poppins", sans-serif;
+      margin-right: 700px;
+    }
+
+    .y-merah {
+      color: #f30a49;
+    }
+
+    /* end navbar */
+
+    /* start header */
+
+    .header {
+      display: flex;
+      background-color: #090030;
+    }
+
+    .left-content h1 {
+      font-family: "Poppins", sans-serif;
+      color: #fff;
+      margin-top: 50px;
+      margin-left: 70px;
+    }
+
+    .left-content p {
+      font-size: 1em;
+      margin-left: 70px;
+      margin-top: 5px;
+      color: #fff;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .right-content img {
+      border-radius: 50%;
+      margin-top: 50px;
+      margin-left: 60%;
+      width: 30%;
+    }
+
+    /* start about me */
+
+    .about-me {
+      background-color: #090030;
+    }
+
+    .about-me h2 {
+      text-align: center;
+      font-family: "Poppins", sans-serif;
+      padding-top: 50px;
+      color: #fff;
+    }
+
+    .about-me-1 {
+      display: flex;
+    }
+
+    .left-about img {
+      border-radius: 50%;
+      width: 37%;
+      margin-left: 70px;
+      margin-top: 50px;
+    }
+
+    .right-about p {
+      color: #fff;
+      font-family: "Poppins", sans-serif;
+      font-size: 1em;
+      margin-top: 50px;
+      margin-right: 80px;
+      text-align: justify;
+    }
+
+    /* end about me */
+
+    /* start my service */
+
+    .service {
+      background-color: #090030;
+      padding-top: 50px;
+    }
+
+    .service h2 {
+      text-align: center;
+      font-family: "Poppins", sans-serif;
+      color: #fff;
+      margin-bottom: 80px;
+    }
+
+    .isi-service {
+      display: flex;
+    }
+
+    .uiux-desain {
+      background-color: rgba(45, 30, 107, 0.5);
+      border-radius: 25px;
+      width: 18%;
+      height: 330px;
+      margin-left: 183px;
+    }
+
+    .uiux-desain svg {
+      width: 40px;
+      color: #f30a49;
+      height: 40px;
+      margin-top: 29px;
+      margin-left: 10px;
+    }
+
+    .uiux-desain h3 {
+      color: #fff;
+      font-family: "Poppins", sans-serif;
+      margin-left: 10px;
+    }
+
+    .uiux-desain p {
+      color: #fff;
+      font-family: "Poppins", sans-serif;
+      margin-left: 10px;
+      font-size: 1em;
+    }
+
+    /* end ui  ux */
+
+    .mobile-dev {
+      background-color: rgba(45, 30, 107, 0.5);
+      border-radius: 25px;
+      width: 18%;
+      margin-left: 100px;
+      height: 330px;
+    }
+
+    .mobile-dev svg {
+      width: 40px;
+      color: #f30a49;
+      height: 40px;
+      margin-left: 10px;
+      margin-top: 30px;
+    }
+
+    .mobile-dev h3 {
+      color: #fff;
+      font-family: "Poppins", sans-serif;
+      margin-left: 10px;
+    }
+
+    .mobile-dev p {
+      color: #fff;
+      font-size: 1em;
+      font-family: "Poppins", sans-serif;
+      margin-left: 10px;
+    }
+
+    /* end web-dev */
+
+    .web-dev {
+      background-color: rgba(45, 30, 107, 0.5);
+      border-radius: 25px;
+      width: 18%;
+      margin-left: 100px;
+      height: 330px;
+    }
+
+    .web-dev svg {
+      width: 40px;
+      height: 40px;
+      color: #f30a49;
+      margin-left: 10px;
+      margin-top: 30px;
+    }
+
+    .web-dev h3 {
+      color: #fff;
+      font-family: "Poppins", sans-serif;
+      margin-left: 10px;
+    }
+
+    .web-dev p {
+      color: #fff;
+      font-family: "Poppins", sans-serif;
+      margin-left: 10px;
+      font-size: 1em;
+    }
+
+    /* end my service */
+
+    /* start footer */
+
+    .footer {
+      background-color: #090030;
+      padding-top: 70px;
+    }
+
+    .footer h2 {
+      color: #fff;
+      font-family: "Poppins", sans-serif;
+      text-align: center;
+    }
+
+    .footer p {
+      color: #fff;
+      font-family: "Poppins", sans-serif;
+      text-align: center;
+      padding-top: 20px;
+    }
+
+    /* start footer-2 */
+
+    .footer-2 {
+      display: flex;
+      margin-left: 70px;
+    }
+
+    .footer-2 label {
+      padding-top: 50px;
+      font-family: "Poppins", sans-serif;
+      color: #fff;
+    }
+
+    .footer-2 input {
+      background-color: #f30a49;
+      border: none;
+      color: #fff;
+      width: 100%;
+    }
+
+    .footer-2 textarea {
+      width: 500px;
+    }
+
+    .footer-2 button {
+      background-color: #f30a49;
+      color: #fff;
+      font-family: "Poppins", sans-serif;
+      width: 20%;
+      border: none;
+      height: 25px;
+      margin-left: 200px;
+      border-radius: 15px;
+      margin-bottom: 100px;
+    }
+
+    .footer-1 {
+      display: flex;
+    }
+
+    .sosial-media {
+      background-color: rgba(45, 30, 107, 0.5);
+      width: 50%;
+      margin-left: 10%;
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
+    }
+
+    .sosial-media svg {
+      margin-left: 20px;
+      margin-top: 20px;
+      color: #f30a49;
+    }
+
+    .sosial-media h4 {
+      color: #fff;
+      margin-left: 20px;
+      font-family: "Poppins", sans-serif;
+    }
+
+    /* end footer */
+
+    /* Animation effect */
+    #typing-heading::after {
+      content: "|";
+      /* Blinking cursor */
+      animation: blink 0.7s infinite;
+      opacity: 0;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 1;
+      }
+    }
+
+    /* Responsive styles */
+    @media screen and (max-width: 768px) {
+      .navbar-toggler {
+        display: flex;
+      }
+
+      .navbar-menu {
+        display: none;
+        width: 100%;
+        text-align: center;
+        margin-top: 15px;
+      }
+
+      .navbar-menu h4 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+      }
+
+      .navbar-menu.active {
+        display: block;
+      }
+
+      .menu-list {
+        flex-direction: column;
+      }
+
+      .menu-list li {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+
+      /* end navbar */
+
+      /* start header */
+
+      .header {
+        display: block;
+        padding-top: 30px;
+        background-color: #090030;
+      }
+
+      .left-content h1 {
+        font-family: "Poppins", sans-serif;
+        color: #fff;
+        margin-top: 0px;
+        margin-left: 70px;
+      }
+
+      .left-content p {
+        font-size: 1em;
+        margin-left: 70px;
+        margin-top: 5px;
+        color: #fff;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .right-content img {
+        display: none;
+      }
+
+      /* end header */
+
+      /* start about */
+      .about-me-1 {
+        display: block;
+      }
+
+      .left-about img {
+        border-radius: 50%;
+        width: 37%;
+        margin-left: 150px;
+        margin-top: 50px;
+      }
+
+      .right-about p {
+        color: #fff;
+        font-family: "Poppins", sans-serif;
+        font-size: 1em;
+        margin-top: 50px;
+        text-align: justify;
+        margin-left: 70px;
+      }
+
+      /* end about */
+
+      /* start service */
+
+      .isi-service {
+        display: block;
+      }
+
+      .uiux-desain {
+        background-color: rgba(45, 30, 107, 0.5);
+        border-radius: 25px;
+        width: 50%;
+        height: 100%;
+        margin-left: 110px;
+        margin-bottom: 50px;
+      }
+
+      .uiux-desain svg {
+        width: 40px;
+        color: #f30a49;
+        height: 40px;
+        margin-top: 29px;
+      }
+
+      .uiux-desain h3 {
+        color: #fff;
+        font-family: "Poppins", sans-serif;
+        margin-left: 10px;
+      }
+
+      .uiux-desain p {
+        color: #fff;
+        font-family: "Poppins", sans-serif;
+        margin-left: 10px;
+        font-size: 1em;
+        padding-bottom: 20px;
+      }
+
+      /* end ui  ux */
+
+      .mobile-dev {
+        background-color: rgba(45, 30, 107, 0.5);
+        border-radius: 25px;
+        width: 50%;
+        height: 100%;
+        margin-left: 110px;
+        margin-bottom: 50px;
+      }
+
+      .mobile-dev svg {
+        width: 40px;
+        color: #f30a49;
+        height: 40px;
+        margin-left: 10px;
+        margin-top: 30px;
+      }
+
+      .mobile-dev h3 {
+        color: #fff;
+        font-family: "Poppins", sans-serif;
+        margin-left: 10px;
+      }
+
+      .mobile-dev p {
+        color: #fff;
+        font-size: 1em;
+        font-family: "Poppins", sans-serif;
+        margin-left: 10px;
+        padding-bottom: 20px;
+      }
+
+      /* end web-dev */
+
+      .web-dev {
+        background-color: rgba(45, 30, 107, 0.5);
+        border-radius: 25px;
+        width: 50%;
+        height: 100%;
+        margin-left: 110px;
+        margin-bottom: 50px;
+      }
+
+      .web-dev svg {
+        width: 40px;
+        height: 40px;
+        color: #f30a49;
+        margin-left: 10px;
+        margin-top: 30px;
+      }
+
+      .web-dev h3 {
+        color: #fff;
+        font-family: "Poppins", sans-serif;
+        margin-left: 10px;
+      }
+
+      .web-dev p {
+        color: #fff;
+        font-family: "Poppins", sans-serif;
+        margin-left: 10px;
+        font-size: 1em;
+        padding-bottom: 20px;
+      }
+
+      /* end my service */
+
+      .footer {
+      background-color: #090030;
+    }
+
+    .footer h2 {
+      color: #fff;
+      font-family: "Poppins", sans-serif;
+      text-align: center;
+    }
+
+    .footer p {
+      color: #fff;
+      font-family: "Poppins", sans-serif;
+      text-align: center;
+      padding-top: 20px;
+    }
+
+    /* start footer-2 */
+
+    .footer-2 {
+      display: flex;
+      margin-left: 70px;
+    }
+
+    .footer-2 label {
+      padding-top: 50px;
+      font-family: "Poppins", sans-serif;
+      color: #fff;
+    }
+
+    .footer-2 input {
+      background-color: #f30a49;
+      border: none;
+      color: #fff;
+      width: 77%;
+    }
+
+    .footer-2 textarea {
+      width: 320px;
+      background-color: #f30a49;
+      color: #fff;
+    }
+
+    .footer-2 button {
+      background-color: #f30a49;
+      color: #fff;
+      font-family: "Poppins", sans-serif;
+      width: 20%;
+      border: none;
+      height: 25px;
+      margin-left: 120px;
+      border-radius: 15px;
+      margin-bottom: 100px;
+    }
+
+    .footer-1 {
+      display: block;
+    }
+
+    .sosial-media {
+      background-color: rgba(45, 30, 107, 0.5);
+      width: 90%;
+      margin-left: 10%;
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
+    }
+
+    }
+
+    /* start footer */
+
+    
+    /* end footer */
+
+    /* end responsive */
+  </style>
+</head>
+
+<body>
+  <!-- start parent -->
+  <div class="parent">
+    <!-- start navbar -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggler" id="navbar-toggler">
+            <span class="toggler-icon"></span>
+            <span class="toggler-icon"></span>
+            <span class="toggler-icon"></span>
+          </button>
+        </div>
+        <div class="navbar-menu" id="navbar-menu">
+          <ul class="menu-list">
+            <h4>Ras<span class="y-merah">y</span>a</h4>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about-me">About Me</a></li>
+            <li><a href="#services">My Services</a></li>
+            <li><a href="#contact-me">Contact Me</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- end navbar -->
+    <!-- start hedaer -->
+    <div id="home" class="header">
+      <div class="left-content">
+        <h1>
+          Hello ! I'm <br />
+          <span id="typing-heading" style="color: #f30a49; z-index: -1"></span>
+        </h1>
+        <p>
+          A 15-year-old Front End developer passionate about crafting stunning
+          web experiences
+        </p>
+      </div>
+      <div class="right-content">
+        <img src="./asset/iconhome.jpg" />
+      </div>
+    </div>
+    <!-- end header -->
+    <!-- start about-me -->
+    <div class="about-me">
+      <h2 id="about-me">About <span style="color: #f30a49">Me</span></h2>
+      <br />
+      <div class="about-me-1">
+        <div class="left-about">
+          <img src="./asset/iconheader.jpg" />
+        </div>
+        <div class="right-about">
+          <p>
+            Hello there! I'm Rasya, a 15-year-old front-end developer
+            passionate<br />
+            about crafting amazing digital experiences. I dove into the world
+            of web development with high enthusiasm and astrong desire to
+            learn<br />
+            and innovate. My coding experience predominantly revolves around
+            the aspects that directly impact users. I relish the process of<br />
+            transforming design concepts into interactive realities using
+            HTML, CSS, and JavaScript. Understanding how each line of code can
+            alter<br />
+            the way users interact with a web page is something I find
+            incredibly fascinating.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- end about-me -->
+    <!-- start service -->
+    <div class="service">
+      <h2 id="services">My <span style="color: #f30a49">Services</span></h2>
+      <div class="isi-service">
+        <div class="uiux-desain">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-brush"
+            viewBox="0 0 16 16">
+            <path
+              d="M15.825.12a.5.5 0 0 1 .132.584c-1.53 3.43-4.743 8.17-7.095 10.64a6.067 6.067 0 0 1-2.373 1.534c-.018.227-.06.538-.16.868-.201.659-.667 1.479-1.708 1.74a8.118 8.118 0 0 1-3.078.132 3.659 3.659 0 0 1-.562-.135 1.382 1.382 0 0 1-.466-.247.714.714 0 0 1-.204-.288.622.622 0 0 1 .004-.443c.095-.245.316-.38.461-.452.394-.197.625-.453.867-.826.095-.144.184-.297.287-.472l.117-.198c.151-.255.326-.54.546-.848.528-.739 1.201-.925 1.746-.896.126.007.243.025.348.048.062-.172.142-.38.238-.608.261-.619.658-1.419 1.187-2.069 2.176-2.67 6.18-6.206 9.117-8.104a.5.5 0 0 1 .596.04zM4.705 11.912a1.23 1.23 0 0 0-.419-.1c-.246-.013-.573.05-.879.479-.197.275-.355.532-.5.777l-.105.177c-.106.181-.213.362-.32.528a3.39 3.39 0 0 1-.76.861c.69.112 1.736.111 2.657-.12.559-.139.843-.569.993-1.06a3.122 3.122 0 0 0 .126-.75l-.793-.792zm1.44.026c.12-.04.277-.1.458-.183a5.068 5.068 0 0 0 1.535-1.1c1.9-1.996 4.412-5.57 6.052-8.631-2.59 1.927-5.566 4.66-7.302 6.792-.442.543-.795 1.243-1.042 1.826-.121.288-.214.54-.275.72v.001l.575.575zm-4.973 3.04.007-.005a.031.031 0 0 1-.007.004zm3.582-3.043.002.001h-.002z" />
+          </svg><br /><br />
+          <h3>UI / UX Desainer</h3>
+          <br />
+          <p>
+            We specialize in crafting<br />
+            engaging, functional,<br />
+            and responsive user<br />
+            experiences through<br />
+            innovative creativity<br />
+            and expert UI/UX design.
+          </p>
+        </div>
+        <div class="web-dev">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-laptop-fill"
+            viewBox="0 0 16 16">
+            <path
+              d="M2.5 2A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5" />
+          </svg><br /><br />
+          <h3>Web Development</h3>
+          <br />
+          <p>
+            We specialize in crafting<br />
+            responsive, interactive,<br />
+            and visually appealing<br />
+            web interfaces for a<br />
+            global user base.
+          </p>
+        </div>
+        <div class="mobile-dev">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-phone-fill"
+            viewBox="0 0 16 16">
+            <path
+              d="M3 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm6 11a1 1 0 1 0-2 0 1 1 0 0 0 2 0" />
+          </svg><br /><br />
+          <h3>Mobile Development</h3>
+          <br />
+          <p>
+            We specialize in crafting innovative mobile apps, prioritizing
+            responsive user experiences and cutting-edge technology
+            advancements.
+          </p>
+        </div>
+      </div>
+    <!-- end service -->
+    <div class="footer">
+      <h2>Contact <span style="color: #f30a49">Me</span></h2>
+      <p>
+        Feel free to contact me any time.<br>
+        I will get back to you as soon as me can !
+      </p><br><br><br><br><br>
+    <div class="footer-1">
+      <div class="footer-2">
+        <div id="contact-me" class="contact-me">
+          <form action="https://formspree.io/f/mwkgewyj" method="POST">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required /><br /><br />
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required /><br /><br />
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br /><br />
+
+            <button type="submit" value="Send">Send</button>
+          </form>
+        </div>
+      </div>
+      <!-- end contact me -->
+      <!-- start sosmed -->
+      <div class="sosial-media">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+          <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+        </svg> <h4>rasyaazildan@gmail.com</h4><br>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+          <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+        </svg><h4>0895421845451</h4><br>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-building" viewBox="0 0 16 16">
+          <path d="M4 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM7.5 5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM4.5 8a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"/>
+          <path d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1zm11 0H3v14h3v-2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V15h3z"/>
+        </svg><h4>Malang - East Java</h4><br>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+          <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
+          <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"/>
+        </svg><h4>08.00 WIB - 16.00 WIB</h4>
+          <a href="https://www.instagram.com/rrsssyaa_?igsh=OTJtdG9pYXo5cHp6" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+          </svg></a>
+          <a href="https://www.threads.net/@flyychmoreee_" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-threads" viewBox="0 0 16 16">
+            <path d="M6.321 6.016c-.27-.18-1.166-.802-1.166-.802.756-1.081 1.753-1.502 3.132-1.502.975 0 1.803.327 2.394.948.591.621.928 1.509 1.005 2.644.328.138.63.299.905.484 1.109.745 1.719 1.86 1.719 3.137 0 2.716-2.226 5.075-6.256 5.075C4.594 16 1 13.987 1 7.994 1 2.034 4.482 0 8.044 0 9.69 0 13.55.243 15 5.036l-1.36.353C12.516 1.974 10.163 1.43 8.006 1.43c-3.565 0-5.582 2.171-5.582 6.79 0 4.143 2.254 6.343 5.63 6.343 2.777 0 4.847-1.443 4.847-3.556 0-1.438-1.208-2.127-1.27-2.127-.236 1.234-.868 3.31-3.644 3.31-1.618 0-3.013-1.118-3.013-2.582 0-2.09 1.984-2.847 3.55-2.847.586 0 1.294.04 1.663.114 0-.637-.54-1.728-1.9-1.728-1.25 0-1.566.405-1.967.868ZM8.716 8.19c-2.04 0-2.304.87-2.304 1.416 0 .878 1.043 1.168 1.6 1.168 1.02 0 2.067-.282 2.232-2.423a6.217 6.217 0 0 0-1.528-.161"/>
+          </svg></a>
+          <a href="https://x.com/flychmoreeee_?t=6HcmjEULvPCNNC2WjeoIBQ&s=08" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+            <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
+          </svg></a>
+        </div>
+      </div>
+      <!-- end sosmed -->
+    </div>
+  </div>
+  <!-- end parent -->
+
+  <script>
+    // Toggle navbar menu for responsive design
+    const navbarToggler = document.getElementById("navbar-toggler");
+    const navbarMenu = document.getElementById("navbar-menu");
+
+    navbarToggler.addEventListener("click", () => {
+      navbarMenu.classList.toggle("active");
+    });
+
+    const text = "Rasya Zildan"; // Text to be typed
+    const typingHeading = document.getElementById("typing-heading");
+
+    let forward = true;
+    let index = 0;
+
+    function type() {
+      if (forward) {
+        typingHeading.textContent = text.slice(0, index);
+        index++;
+      } else {
+        typingHeading.textContent = text.slice(0, index);
+        index--;
+      }
+
+      if (index === text.length) {
+        forward = false;
+        setTimeout(type, 500); // Wait before deleting
+      } else if (index === 0) {
+        forward = true;
+        setTimeout(type, 500); // Wait before typing again
+      } else {
+        setTimeout(type, 200); // Typing speed (adjust as needed)
+      }
+    }
+
+    type(); // Start typing when the page loads
+  </script>
+</body>
+
+</html>
